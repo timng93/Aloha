@@ -1,3 +1,4 @@
+/*Global Styles*/
 @font-face {
   font-family: "Playfair Display";
   src: url("./font/PlayfairDisplay-Bold.eot");
@@ -48,11 +49,31 @@
   font-style: normal;
 }
 
+body {
+  font-family: "Raleway", "Times New Roman", Times, serif;
+  font-size: 14px;
+  color: #2d2d2d;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+}
+
 .container {
   max-width: 1240px;
   margin: 0;
+  padding: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*Header*/
 header {
   width: 100%;
   margin: 0;
@@ -60,7 +81,23 @@ header {
 
 .flex-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.aloha-logo {
+  width: 50%;
+  order: 1;
+}
+
+.cart-icon {
+  width: 50%;
+  order: 2;
+}
+
+.navigation-menu {
+  width: 100%;
+  order: 3;
 }
 
 .navigation-menu ul li {
@@ -78,9 +115,224 @@ a {
   font-size: 1rem;
 }
 
-.flex-mens {
+/*Banner*/
+.banner-text {
+  background: url("./images/banner-girl.png") no-repeat center top,
+    url("./images/flower-bkgd.jpg") no-repeat center top;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+.banner-text h2 {
+  font-weight: 100;
+  font-size: 2rem;
+  text-align: center;
+  position: absolute;
+  margin: 20% 0 0 45%;
+  color: white;
+}
+
+.banner-text h1 {
+  font-weight: 400;
+  font-size: 3.5rem;
+  text-align: center;
+  position: absolute;
+  margin: 25% 0 0 30%;
+  color: white;
+}
+
+/*styles*/
+
+.styles h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.styles p {
+  font-weight: 100;
+  font-size: 1.7 rem;
+  text-align: center;
+  display: block;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 2%;
+}
+
+em {
+  font-weight: 100;
+}
+
+.first-row {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  border: solid #ffffff 3px;
+}
+
+.mens a,
+.trends a,
+.glasses a {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+
+.mens {
+  background: url("./images/mens-category.jpg") no-repeat center top;
+  width: 100%;
+  height: 35vw;
+  position: relative;
+  border: solid #ffffff 3px;
+  order: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trends {
+  background: url("./images/trends-category.jpg") no-repeat center top;
+  width: 48%;
+  height: 35vw;
+  position: relative;
+  border: solid #ffffff 3px;
+  order: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glasses {
+  background: url("./images/glasses-category.jpg") no-repeat center top;
+  width: 48%;
+  height: 35vw;
+  position: relative;
+  border: solid #ffffff 3px;
+  order: 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*styles-image second-row*/
+
+.second-row {
+  display: flex;
+  flex-wrap: wrap;
+  border: solid #ffffff 3px;
+}
+
+.sale a,
+.bags a,
+.womens a {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.sale {
+  background: url("./images/sale-category.jpg") no-repeat center top;
+  width: 48%;
+  height: 35vw;
+  position: relative;
+  border: solid #ffffff 3px;
+  order: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bags {
+  background: url("./images/bags-category.jpg") no-repeat center top;
+  width: 48%;
+  height: 35vw;
+  position: relative;
+  border: solid #ffffff 3px;
+  order: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.womens {
+  background: url("./images/womens-category.jpg") no-repeat center top;
+  width: 100%;
+  height: 35vw;
+  position: relative;
+  border: solid #ffffff 3px;
+  order: 3;
+  flex-basis: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Subscribe*/
+
+.subscription h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.subscription p {
+  font-weight: 100;
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: center;
+  display: block;
+}
+
+.subscription em {
+  font-weight: 100;
+}
+.subscription {
+  background: url("./images/wave-bkgd.jpg") no-repeat center bottom;
+  min-height: 400px;
+  padding: 1rem;
+  
+}
+
+.subscription-form {
+  position: relative;
+  margin: auto;
+  max-width: 400px;
+}
+.first-button input {
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.first-button ::placeholder {
+  text-align: left;
+}
+
+.second-button input {
+  color: #ffffff;
+  background-color: #e2574c;
+  font-size: 1.2rem;
+  text-align: center;
+  right: 0;
+  top: 0;
+  position: absolute;
+  border-radius: 30px;
+}
+
+/*Footer*/
+footer {
+  background-color: #242424;
+  color: white;
+  width: 100%;
+  margin: 0;
+  padding: 2%;
 }
 
 a.footer-email {
@@ -92,180 +344,88 @@ a.footer-email {
   color: white;
   text-decoration: none;
 }
-.banner-text h2 {
-  font-size: 2rem;
-  text-align: center;
-  position: absolute;
-  margin: 20% 0 0 45%;
-  color: white;
-}
 
-.banner-text h1 {
-  font-size: 3.5rem;
-  text-align: center;
-  position: absolute;
-  margin: 25% 0 0 30%;
-  color: white;
-}
-
-.banner-text {
-  background: url("./images/banner-girl.png") no-repeat center top,
-    url("./images/flower-bkgd.jpg") no-repeat center top;
-  width: 100%;
-  height: 600px;
-  position: relative;
-}
-/*styles*/
-
-.styles h2 {
-  text-align: center;
-  font-size: 2rem;
-}
-
-.styles p {
-  font-size: 1.7 rem;
-  text-align: center;
-  display: block;
-  margin-left: 15%;
-  margin-right: 15%;
-  padding-bottom: 25px;
-}
-
-.mens {
-  width: 30%;
-}
-
-.trends,
-.glasses {
-  width: 25%;
-}
-
-/*Categories*/
-
-.mens {
-  background: url("./images/mens-category.jpg") no-repeat center top;
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
-.trends {
-  background: url("./images/trends-category.jpg") no-repeat center top;
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-.glasses {
-  background: url("./images/glasses-category.jpg") no-repeat center top;
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
-.flex-mens {
-  display: flex;
-  flex-direction: flow;
-}
-.mens {
-  flex-basis: 50%;
-}
-
-.trends {
-  flex-basis: 25%;
-}
-
-.glasses {
-  flex-basis: 25%;
-}
-
-.mens h2 {
-  font-size: 2rem;
-  text-align: center;
-  position: absolute;
-  margin: 25% 25% 25% 25%;
-  color: white;
-}
-
-/*Subscribe*/
-
-.subscription h2 {
-  color: #ffffff;
-  font-size: 2rem;
-  text-align: center;
-  position: absolute;
-  margin-top: 7%;
-  margin-left: 35%;
-}
-
-.subscription p {
-  color: #ffffff;
-  font-size: 1.2rem;
-  text-align: center;
-  display: block;
-  margin-top: 12%;
-  margin-left: 25%;
-  margin-right: 25%;
-  position: absolute;
-}
-
-.subscription {
-  background: url("./images/wave-bkgd.jpg") no-repeat center bottom;
-  height: 400px;
-  position: relative;
-}
-
-.first-button input {
-  color: #ffffff;
-  font-size: 1.2rem;
-  text-align: center;
-  display: block;
-  margin-top: 24%;
-  margin-left: 35%;
-  margin-right: 25%;
-  position: absolute;
-  border-radius: 30px;
-}
-
-.second-button input {
-  color: #ffffff;
-  background-color: #e2574c;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 24%;
-  margin-left: 53%;
-  margin-right: 25%;
-  position: absolute;
-  border-radius: 30px;
-}
-
-/*footer*/
-footer {
-  background-color: #242424;
-  color: white;
-  width: 100%;
-  margin: 0;
-  padding: 2%;
-}
 footer ul {
   list-style: none;
 }
 .flex-footer {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 
 p.address {
   color: #d7d7d7;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Playfair Display", "Times New Roman", Times, serif;
-}
+/*Media Queries
+Tablet & Desktop
+*/
 
-body {
-  font-family: "Raleway", "Times New Roman", Times, serif;
+/* Tablet */
+@media all and (min-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .flex-header {
+    align-items: stretch;
+  }
+
+  .aloha-logo {
+    order: 1;
+    width: 20%;
+  }
+
+  .cart-icon {
+    order: 3;
+    width: 20%;
+  }
+
+  .navigation-menu {
+    width: 60%;
+    order: 2;
+  }
+
+  .first-row {
+    flex-wrap: nowrap;
+  }
+
+  .mens {
+    flex-basis: 50%;
+  }
+  
+  .trends {
+    flex-basis: 25%;    
+  }
+  
+  .glasses {
+    flex-basis: 25%;    
+  }
+    .second-row {
+      flex-wrap: nowrap;
+    }
+
+    .sale {
+      flex-basis: 23%;
+    }
+    
+    .bags {
+      flex-basis: 23%;
+    }
+    
+    .womens {
+      flex-basis: 48%;
+    }
+
+    .flex-footer {
+      flex-direction: row;
+      justify-content: space-around;   
+    }
+
+
+/* Desktop */
+@media screen and (min-width: 1240px) {
 }
