@@ -1,3 +1,133 @@
+/*CSS Reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 /*Global Styles*/
 @font-face {
   font-family: "Playfair Display";
@@ -67,8 +197,6 @@ h2 {
 
 .container {
   max-width: 1240px;
-  margin: 0;
-  padding: 0;
 }
 
 img {
@@ -132,22 +260,23 @@ a:hover {
   position: relative;
 }
 
+.banner-text h2,
+.banner-text h1 {
+  text-align: center;
+  position: absolute;
+  color: #ffffff;
+}
+
 .banner-text h2 {
   font-weight: 100;
   font-size: 2rem;
-  text-align: center;
-  position: absolute;
   margin: 20% 0 0 45%;
-  color: #ffffff;
 }
 
 .banner-text h1 {
   font-weight: 400;
   font-size: 3.5rem;
-  text-align: center;
-  position: absolute;
   margin: 25% 0 0 30%;
-  color: #ffffff;
 }
 
 /*styles*/
@@ -155,18 +284,23 @@ a:hover {
 .styles h2 {
   text-align: center;
   font-size: 2rem;
+  padding: 3%;
 }
 
 .styles p {
-  font-weight: 100;
+  font-weight: 200;
   font-size: 1.7 rem;
   text-align: center;
   display: block;
-  padding: 2% 15%;
+  padding: 3% 10%;
 }
 
 em {
-  font-weight: 100;
+  font-style: italic;
+}
+
+strong {
+  font-weight: 600;
 }
 
 /*categories*/
@@ -227,8 +361,6 @@ em {
   order: 3;
 }
 
-/*styles-image second-row*/
-
 .sale {
   background: linear-gradient(rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.3)),
     url("./images/sale-category.jpg") no-repeat center top;
@@ -246,7 +378,13 @@ em {
     url("./images/womens-category.jpg") no-repeat center top;
   order: 3;
 }
+
 /*Featured Products*/
+
+.featured h2,
+.main-carousel {
+  text-align: center;
+}
 
 .main-carousel .carousel-cell {
   width: 100%;
@@ -254,38 +392,33 @@ em {
 .carousel-cell h2 {
   color: #969696;
   font-size: 0.9srem;
+  font-weight: 400;
 }
 .carousel-cell h2.product {
   color: #e2574c;
   font-size: 1.2rem;
 }
 
-#featured {
+.featured {
   padding: 5%;
 }
 /*Subscribe*/
 
-.subscription h2 {
-  color: #ffffff;
-  font-size: 2rem;
+.subscription {
+  background: url("./images/wave-bkgd.jpg") no-repeat center bottom;
+  min-height: 300px;
+  padding-top: 4%;
   text-align: center;
+  color: #ffffff;
+}
+
+.subscription h2 {
+  font-size: 2rem;
 }
 
 .subscription p {
-  font-weight: 100;
-  color: #ffffff;
   font-size: 1.2rem;
-  text-align: center;
   display: block;
-}
-
-.subscription em {
-  font-weight: 100;
-}
-.subscription {
-  background: url("./images/wave-bkgd.jpg") no-repeat center bottom;
-  min-height: 400px;
-  padding: 1rem;
 }
 
 .subscription-form {
@@ -294,9 +427,7 @@ em {
   max-width: 400px;
 }
 .first-button input {
-  color: #ffffff;
   font-size: 1.2rem;
-  text-align: center;
   display: block;
   width: 100%;
   border-radius: 30px;
@@ -310,7 +441,6 @@ em {
   color: #ffffff;
   background-color: #e2574c;
   font-size: 1.2rem;
-  text-align: center;
   right: 0;
   top: 0;
   position: absolute;
@@ -337,7 +467,7 @@ em {
 .copy-right,
 .contact,
 .address {
-  padding: 1%;
+  padding: 3%;
 }
 
 .address p {
@@ -349,10 +479,6 @@ em {
 .social-media a {
   color: #ffffff;
   text-decoration: none;
-}
-
-.social-media ul {
-  list-style: none;
 }
 
 .social-media span {
@@ -397,7 +523,7 @@ Tablet & Desktop
 
   .navigation-menu ul {
     border: 0;
-    padding-top: 0;
+    padding-top: 6%;
   }
   /*categories*/
   .first-row,
@@ -419,11 +545,6 @@ Tablet & Desktop
 
   /*Featured Products*/
 
-  .featured h2,
-  .main-carousel {
-    text-align: center;
-  }
-
   .main-carousel .carousel-cell {
     width: 50%;
   }
@@ -434,17 +555,7 @@ Tablet & Desktop
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-  }
-
-  .info,
-  .social-media {
-    padding: 3% 0 3% 0;
-  }
-
-  .copy-right,
-  .contact,
-  .address {
-    padding: 0;
+    padding: 2%;
   }
 
   .social-media li {

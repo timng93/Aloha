@@ -46,9 +46,20 @@ $(document).ready(function() {
       }
     }); // end of smooth scroll
 
+  /*Carousel Categories*/
   $(".main-carousel").flickity({
     // options
     cellAlign: "left",
     contain: true
+  });
+
+  /*Subscription*/
+  $("#my-form").on("submit", function(event) {
+    event.preventDefault();
+    if ($("#my-text-input").val() == "") {
+      alert("You missed the field.");
+    } else {
+      alert("Thanks for filling the field!");
+    }
   });
 });
