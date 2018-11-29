@@ -113,6 +113,11 @@ ol,
 ul {
   list-style: none;
 }
+
+.social-media ul{
+  padding-bottom: 2rem;
+
+}
 blockquote,
 q {
   quotes: none;
@@ -198,7 +203,26 @@ h2 {
 img {
   max-width: 100%;
   height: auto;
+  
 }
+
+.aloha-logo img{
+  width: 70%;
+    padding: 0.5rem 0.5rem;
+
+}
+
+.cart-icon img{
+  position: relative;
+    left: 8rem;
+    width: 30%;
+    padding: 0.5rem 0.5rem;
+
+}
+
+
+
+
 /*Header*/
 header {
   width: 100%;
@@ -228,7 +252,15 @@ header {
 
 .navigation-menu ul li {
   display: inline-block;
+  padding: 0.5rem 0.75rem;
 }
+
+
+
+
+
+
+
 
 .navigation-menu ul {
   border-top: solid #d7d7d7 2px;
@@ -252,6 +284,7 @@ a:hover {
     url("./images/banner-girl.png") no-repeat center top,
     linear-gradient(rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.2)),
     url("./images/flower-bkgd.jpg") no-repeat center top;
+  background-size: 100vh, 20rem, 100vh, 100rem;
   width: 100%;
   height: 600px;
   position: relative;
@@ -293,6 +326,8 @@ a:hover {
   margin-left: 12%;
   margin-right: 10%;
   font-size: 1.1rem;
+    line-height: 1.7rem;
+    text-align: center;
 }
 
 em {
@@ -331,6 +366,7 @@ strong {
   height: 35vw;
   position: relative;
   border: solid #ffffff 5px;
+  background-size: cover, cover;
 }
 
 .mens,
@@ -348,36 +384,42 @@ strong {
 .mens {
   background: linear-gradient(rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.3)),
     url("./images/mens-category.jpg") no-repeat center top;
+    background-size: cover, cover;
   order: 1;
 }
 
 .trends {
   background: linear-gradient(rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.3)),
     url("./images/trends-category.jpg") no-repeat center top;
+    background-size: cover, cover;
   order: 2;
 }
 
 .glasses {
   background: linear-gradient(rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.3)),
     url("./images/glasses-category.jpg") no-repeat center top;
+    background-size: cover, cover;
   order: 3;
 }
 
 .sale {
   background: linear-gradient(rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.3)),
     url("./images/sale-category.jpg") no-repeat center top;
+    background-size: cover, cover;
   order: 1;
 }
 
 .bags {
   background: linear-gradient(rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.3)),
     url("./images/bags-category.jpg") no-repeat center top;
+    background-size: cover, cover;
   order: 2;
 }
 
 .womens {
   background: linear-gradient(rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.3)),
     url("./images/womens-category.jpg") no-repeat center top;
+    background-size: cover, cover;
   order: 3;
 }
 
@@ -427,6 +469,7 @@ strong {
   margin-right: 10%;
   font-size: 1.1rem;
   padding: 1%;
+  line-height: 2rem;
 }
 
 .subscription-form {
@@ -507,6 +550,10 @@ Tablet & Desktop
     font-size: 16px;
   }
 
+  .social-media ul{
+    padding-bottom: 0;
+  }
+
   /*Header*/
   .flex-header {
     align-items: stretch;
@@ -569,6 +616,7 @@ Tablet & Desktop
 
   .social-media li {
     display: block;
+    padding-bottom: 0.5rem;
   }
 
   .social-media span {
