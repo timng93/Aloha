@@ -220,9 +220,6 @@ img {
 
 }
 
-
-
-
 /*Header*/
 header {
   width: 100%;
@@ -254,13 +251,6 @@ header {
   display: inline-block;
   padding: 0.5rem 0.75rem;
 }
-
-
-
-
-
-
-
 
 .navigation-menu ul {
   border-top: solid #d7d7d7 2px;
